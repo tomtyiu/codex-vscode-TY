@@ -1,4 +1,4 @@
-<h1 align="center">OpenAI Codex CLI</h1>
+<h1 align="center">OpenAI Codex CLI for VScode</h1>
 <p align="center">Lightweight coding agent that runs in your terminal VScode extension</p>
 
 <p align="center"><code>npm i -g @openai/codex</code></p>
@@ -725,6 +725,9 @@ echo "use flake ../flake.nix#codex-rs" >> .envrc && direnv allow
 ## Security & responsible AI
 
 Have you discovered a vulnerability or have concerns about model output? Please e-mail **security@openai.com** and we will respond promptly.
+
+---
+Stage 1: have not done yet
 
 ---
 
