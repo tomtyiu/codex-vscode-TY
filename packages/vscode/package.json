@@ -1,0 +1,35 @@
+{
+  "name": "codex-vscode-extension",
+  "displayName": "Codex Integration",
+  "description": "Run OpenAI Codex from VS Code",
+  "version": "0.0.1",
+  "publisher": "openai",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:codex.prompt"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "codex.prompt",
+        "title": "Codex: Run Prompt"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "build": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "typescript": "^5.3.3",
+    "vscode": "^1.1.41"
+  },
+  "dependencies": {
+    "@openai/codex": "workspace:*"
+  }
+}
