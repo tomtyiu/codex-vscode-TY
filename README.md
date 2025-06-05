@@ -727,6 +727,7 @@ echo "use flake ../flake.nix#codex-rs" >> .envrc && direnv allow
 Have you discovered a vulnerability or have concerns about model output? Please e-mail **security@openai.com** and we will respond promptly.
 
 ---
+Progress:
 Stage 1: have not done yet
 
 ---
