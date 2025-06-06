@@ -1,24 +1,25 @@
 import * as vscode from 'vscode';
+import * as fs from 'fs';
+import * as path from 'path';
 
-const recipes = [
-  'Explain this codebase to me',
-  'Create the fanciest todo-list app',
-  'Refactor the Dashboard component to React Hooks',
-  'Generate SQL migrations for adding a users table',
-  'Write unit tests for utils/date.ts',
-  'Bulk-rename *.jpeg -> *.jpg with git mv',
-  'Explain what this regex does: ^(?=.*[A-Z]).{8,}$',
-  'Carefully review this repo, and propose 3 high impact well-scoped PRs',
-  'Look for vulnerabilities and create a security review report',
-];
+function getCommands(extensionPath: string): string[] {
+  try {
+    const pkgJsonPath = path.join(extensionPath, 'package.json');
+    const pkg = JSON.parse(fs.readFileSync(pkgJsonPath, 'utf8'));
+    return Array.isArray(pkg.codexCommands) ? pkg.codexCommands : [];
+  } catch {
+    return [];
+  }
+}
 
 export function activate(context: vscode.ExtensionContext) {
+  const commands = getCommands(context.extensionPath);
   const disposable = vscode.commands.registerCommand('codex.prompt', async () => {
-    const items: vscode.QuickPickItem[] = recipes.map((r) => ({ label: r }));
+    const items: vscode.QuickPickItem[] = commands.map((c) => ({ label: c }));
     items.push({ label: 'Custom prompt...' });
 
     const selection = await vscode.window.showQuickPick(items, {
-      placeHolder: 'Select a recipe or enter a custom prompt',
+      placeHolder: 'Select a command or enter a custom prompt',
     });
 
     if (!selection) {
