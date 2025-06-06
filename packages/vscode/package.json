@@ -22,7 +22,8 @@
   },
   "scripts": {
     "compile": "tsc -p ./",
-    "build": "npm run compile"
+    "build": "npm run compile",
+    "prepare": "npm run compile"
   },
   "devDependencies": {
     "@types/node": "^18",
