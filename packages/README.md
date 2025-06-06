@@ -20,7 +20,9 @@ If you have any requirements or dependencies, add a section describing those and
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 in Vscode terminal>
->>  npm install -g @openai/codex
+``
+npm install -g @openai/codex
+``
 
 For example:
 
