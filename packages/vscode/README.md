@@ -36,3 +36,27 @@ The extension relies on the `@openai/codex` package from this workspace and spaw
 3. Pick one of the default prompts or select **Custom prompt...** to type your own.
 4. A new terminal will appear running `codex` with your prompt. Follow the CLI instructions to apply or discard the suggested changes.
 
+## Development & Packaging
+
+This repository uses **pnpm** workspaces. Run these commands from the repo root
+to install dependencies and build the extension:
+
+```bash
+pnpm install
+pnpm --filter codex-vscode-extension run build
+```
+
+To create a `.vsix` package, install [`vsce`](https://github.com/microsoft/vsce)
+and run:
+
+```bash
+pnpm exec vsce package
+```
+
+## APIs & Contribution Points
+
+The extension registers the command `codex.prompt` using
+`vscode.commands.registerCommand` and contributes it via
+`contributes.commands`. It also uses the VS Code API for terminals and quick
+picks (`window.createTerminal`, `window.showQuickPick`, and
+`window.showInputBox`).
