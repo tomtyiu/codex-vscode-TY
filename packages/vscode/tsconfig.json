@@ -7,7 +7,10 @@
     "sourceMap": true,
     "rootDir": "src",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "types": ["node", "vscode"],
+    "skipLibCheck": true
   },
   "include": ["src"]
 }
