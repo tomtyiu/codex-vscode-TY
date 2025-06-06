@@ -22,6 +22,16 @@ corepack enable
 corepack prepare pnpm@10.8.1 --activate
 ```
 
+### Offline installs
+
+Use the `scripts/setup-offline.sh` helper to pre-fetch dependencies and install
+without a network connection:
+
+```bash
+scripts/setup-offline.sh --download-only  # fetch packages
+scripts/setup-offline.sh                  # install offline
+```
+
 ### Common commands
 
 | npm command     | pnpm equivalent  |

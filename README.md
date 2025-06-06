@@ -24,6 +24,7 @@
 - [Tracing / verbose logging](#tracing--verbose-logging)
 - [Recipes](#recipes)
 - [Installation](#installation)
+- [Offline setup](#offline-setup)
 - [Configuration guide](#configuration-guide)
   - [Basic configuration parameters](#basic-configuration-parameters)
   - [Custom AI provider configuration](#custom-ai-provider-configuration)
@@ -324,6 +325,23 @@ pnpm link
 ```
 
 </details>
+
+## Offline setup
+
+If you need to work without internet access, you can prefetch all Node
+dependencies on a networked machine and reuse them elsewhere:
+
+```bash
+# Download dependencies
+scripts/setup-offline.sh --download-only
+
+# Later, install using the cached packages
+scripts/setup-offline.sh
+```
+
+This script installs `pnpm` via `corepack` if needed and runs the required
+workspace installs. The downloaded artifacts can be copied into an offline
+environment for reproducible installs.
 
 ---
 
