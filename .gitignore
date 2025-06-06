@@ -11,6 +11,7 @@ node_modules
 dist/
 build/
 out/
+!packages/vscode/out/
 storybook-static/
 
 # ignore README for publishing
