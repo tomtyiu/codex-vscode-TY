@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 
-export function activate(context: vscode.ExtensionContext) {
+export function activate(context: any) {
   const disposable = vscode.commands.registerCommand('codex.prompt', async () => {
     const prompt = await vscode.window.showInputBox({
       prompt: 'Enter a prompt for Codex',
