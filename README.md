@@ -60,8 +60,8 @@
 ---
 
 > **Important Note**: This is a fork of the [original OpenAI Codex CLI](https://github.com/openai/codex) with Vscode support The main differences in this fork are:
-> -Support Vscode
-> -Read Readme.me in https://github.com/tomtyiu/codex-vscode-TY/tree/main/packages/vscode for more information
+> - Add to support Vscode Extension
+> - Read Readme.me in https://github.com/tomtyiu/codex-vscode-TY/tree/main/packages/vscode for more information
 
 ## Experimental technology disclaimer
 
