@@ -11,3 +11,10 @@ The default command list includes:
 - Look for vulnerabilities for code
 
 The extension relies on the `@openai/codex` package from this workspace and spawns `npx codex` inside the terminal.
+
+## Installation
+
+1. Run `pnpm install` in the repository root to install workspace dependencies.
+2. Open this `packages/vscode` directory in VS Code.
+3. Press `F5` to launch an Extension Development Host.
+   To install the extension globally, run `npx vsce package` and use **Install from VSIX...**.

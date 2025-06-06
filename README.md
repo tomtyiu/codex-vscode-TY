@@ -25,6 +25,7 @@
 - [Recipes](#recipes)
 - [Installation](#installation)
 - [Offline setup](#offline-setup)
+- [VS Code extension](#vs-code-extension)
 - [Configuration guide](#configuration-guide)
   - [Basic configuration parameters](#basic-configuration-parameters)
   - [Custom AI provider configuration](#custom-ai-provider-configuration)
@@ -342,6 +343,18 @@ scripts/setup-offline.sh
 This script installs `pnpm` via `corepack` if needed and runs the required
 workspace installs. The downloaded artifacts can be copied into an offline
 environment for reproducible installs.
+
+## VS Code extension
+
+The repository includes a minimal VS Code extension under `packages/vscode`.
+It provides the **Codex: Run Prompt** command to invoke the CLI directly from
+the editor.
+
+1. From the repository root run `pnpm install` to fetch dependencies.
+2. Open the `packages/vscode` folder in VS Code.
+3. Press `F5` to start an Extension Development Host and test the extension.
+   To install permanently, run `npx vsce package` and choose **Install from VSIX...**
+   in the Extensions view.
 
 ---
 
