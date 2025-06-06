@@ -28,9 +28,16 @@
   "devDependencies": {
     "@types/node": "^18",
     "typescript": "^5.3.3",
-    "vscode": "^1.1.41"
+    "vscode": "^1.1.37"
   },
   "dependencies": {
     "@openai/codex": "workspace:*"
-  }
+  },
+  "codexCommands": [
+    "Explain codebase",
+    "Refactor code",
+    "Write unit",
+    "Write unit tests for code",
+    "Look for vulnerabilities for code"
+  ]
 }
